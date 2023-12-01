@@ -5,8 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/geethadanda/WebAppDemo1stDec.git'
-                
+                git branch : 'main', url : 'https://github.com/geethadanda/WebAppDemo1stDec.git'
+                              
                 // Run Maven on a Unix agent.
                 sh "mvn -B -DskipTests clean package"
                 // To run Maven on a Windows agent, use
