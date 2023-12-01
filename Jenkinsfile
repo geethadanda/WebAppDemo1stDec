@@ -31,7 +31,7 @@ pipeline {
                 // failed, record the test results and archive the jar file.
                 success {
                     
-                    unit 'target/surefire-reports/*.xml'
+                    junit 'target/surefire-reports/*.xml'
                 }
             }
         }
